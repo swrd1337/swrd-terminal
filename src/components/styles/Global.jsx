@@ -23,6 +23,11 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.primary};
     font-size: 14px;
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 `
 
 export default GlobalStyles
