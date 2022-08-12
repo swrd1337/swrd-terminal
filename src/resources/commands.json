@@ -1,0 +1,13 @@
+{
+  "commands" : [
+    {
+      "description": "Show this help message",
+      "function": "help"
+    },
+    {
+      "description": "Clear the screen",
+      "function": "clear",
+      "noOutput": true
+    }
+  ]
+}

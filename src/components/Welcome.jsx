@@ -46,6 +46,7 @@ function Welcome({ onButtonClick }) {
         onMouseLeave={onLeaveHandler}
         whileHover={{
           scale: 1.2,
+          backgroundColor: "#87C7BD24"
         }}
       >
         Open the Terminal
