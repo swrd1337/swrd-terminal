@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const BackgroundImage = styled.img`
   filter: blur(12px);
@@ -8,5 +8,4 @@ export const BackgroundImage = styled.img`
   height: 100%;
   min-width: 100%;
   min-height: 100%;
-
-`
+`;

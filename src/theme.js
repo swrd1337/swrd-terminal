@@ -13,6 +13,17 @@ const theme = {
   font: {
     primary: `'Roboto Mono', monospace`,
   },
+  input: {
+    primary: "#7aa6da",
+  },
+  paper: {
+    border: {
+      primary: "#32524D",
+    },
+    background: {
+      primary: "#081616b0",
+    },
+  },
 };
 
 export default theme;

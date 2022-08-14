@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -28,6 +28,6 @@ const GlobalStyles = createGlobalStyle`
     position: absolute;
     bottom: 0;
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;

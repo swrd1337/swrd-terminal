@@ -3,7 +3,7 @@ import { OutlinedButton } from "./styles/Button";
 import { FlexContainer } from "./styles/Flex";
 import { motion } from "framer-motion";
 import MainInfo from "../resources/mainInfo";
-import { Headline } from './styles/Typography';
+import { Headline } from "./styles/Typography";
 
 const MotionButton = motion(OutlinedButton);
 
@@ -16,47 +16,50 @@ function Welcome({ onButtonClick }) {
   const onLeaveHandler = () => setButtonHover(false);
 
   return (
-    <MotionFlex 
+    <MotionFlex
       initial={{
         y: 10,
-        opacity: 0
+        opacity: 0,
       }}
       animate={{
         y: 0,
         opacity: 1,
       }}
       transition={{
-        delay: 0.3
+        delay: 0.3,
       }}
       flexDir="column"
       alignItems="center"
     >
-      <motion.div 
+      <motion.div
         animate={{
-          scale: buttonHover ? 0.9 : 1
+          scale: buttonHover ? 0.9 : 1,
         }}
       >
-        <Headline style={{ margin: 0 }} dangerouslySetInnerHTML={{ __html: MainInfo.title  }} />
+        <Headline
+          style={{ margin: 0 }}
+          dangerouslySetInnerHTML={{ __html: MainInfo.title }}
+        />
         <p>{MainInfo.description}</p>
       </motion.div>
 
-      <MotionButton 
+      <MotionButton
         onClick={onButtonClick}
         onMouseEnter={onEnterHandler}
         onMouseLeave={onLeaveHandler}
         whileHover={{
-          scale: 1.2
+          scale: 1.2,
         }}
         transition={{
           type: "spring",
           stiffness: 300,
-          damping: 15
+          damping: 15,
         }}
       >
         Open the Terminal
       </MotionButton>
     </MotionFlex>
-  )
+  );
 }
 
 export default Welcome;
