@@ -9,12 +9,10 @@ const theme = {
   },
   accent: {
     primary: "#EF6065",
+    secondary: "#FF9FA2",
   },
   font: {
     primary: `'Roboto Mono', monospace`,
-  },
-  input: {
-    primary: "#7aa6da",
   },
   paper: {
     border: {

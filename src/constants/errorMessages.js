@@ -1,0 +1,1 @@
+export const COMMAND_NOT_FOUND = "Command not found. Type 'help' for a list of available commands.";

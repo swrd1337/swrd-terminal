@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FlexContainer = styled.div`
   display: flex;
+  width: ${({ w }) => w || "auto"};
   height: ${({ h }) => h || "auto"};
   flex-direction: ${({ flexDir }) => flexDir || "row"};
   justify-content: ${({ justifyContent }) => justifyContent || "unset"};

@@ -12,8 +12,8 @@ function AnimatedCursor() {
       animate={{
         backgroundColor: [
           "#FFF0",
-          theme.input.primary,
-          theme.input.primary,
+          theme.textColor.primary,
+          theme.textColor.primary,
           "#FFF0",
         ],
       }}

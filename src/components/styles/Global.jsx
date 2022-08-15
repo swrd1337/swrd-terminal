@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
       @media (max-width: 768px) {
         text-align: center;
       }
+      white-space: pre-wrap;
     }
   }
 
@@ -27,7 +28,18 @@ const GlobalStyles = createGlobalStyle`
   footer {
     position: absolute;
     bottom: 0;
+    width: 100%;
   }
+
+  span.user {
+    color: ${({ theme }) => theme.accent.primary};
+  }
+
+  span.cmdhl {
+    color: ${({ theme }) => theme.accent.primary};
+    text-shadow: 0 0 5px ${({ theme }) => theme.accent.primary};
+  }
+
 `;
 
 export default GlobalStyles;

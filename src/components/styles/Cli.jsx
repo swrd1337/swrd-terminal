@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { username } from "../../resources/commands";
+import { username } from "../../resources/mainInfo.json";
 
 export const CliInput = styled.input`
   background-color: transparent;
@@ -16,19 +16,18 @@ export const CliCursor = styled.span`
   display: inline-block;
   width: 10px;
   height: 16px;
-  background-color: white;
   cursor: text;
 `;
 
-export const CommandBody = styled.span`
+export const CommandBody = styled.div`
   font-size: 16px;
-  color: ${({ theme }) => theme.input.primary};
+  color: ${({ theme }) => theme.textColor.primary};
   font-weight: 600;
   cursor: text;
 
   &::before {
     content: '${username}';
-    color: ${({ theme }) => theme.textColor.secondary};
+    color: #d7d7d7;
     margin-right: 10px;
   }
 `

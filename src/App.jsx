@@ -7,7 +7,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 function App() {
-  const [openTerminal, setOpenTerminal] = useState(true);
+  const [openTerminal, setOpenTerminal] = useState(false);
 
   const onOpenClickHandler = () => setOpenTerminal(!openTerminal);
 
@@ -32,20 +32,10 @@ function App() {
           >
             <Welcome onButtonClick={onOpenClickHandler} />
           </motion.div>
-          <motion.div
-            initial={{
-              y: -1000,
-              display: "none",
-            }}
-            animate={{
-              y: openTerminal ? 0 : -1000,
-              opacity: openTerminal ? 1 : 0,
-              position: openTerminal ? "unset" : "absolute",
-              display: openTerminal ? "block" : "none",
-            }}
-          >
-            <TerminalWindow />
-          </motion.div>
+          <TerminalWindow
+            openTerminal={openTerminal}
+            onClose={onOpenClickHandler}
+          />
         </FlexContainer>
       </main>
       <Footer />

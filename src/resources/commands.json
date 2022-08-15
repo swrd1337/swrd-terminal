@@ -1,14 +1,17 @@
 {
-  "username": "guest@swrd1337",
-  "commands" : [
-    {
-      "description": "Show this help message",
-      "function": "help"
-    },
-    {
-      "description": "Clear the screen",
-      "function": "clear",
-      "noOutput": true
-    }
-  ]
+  "help": {
+    "messages": [
+      "<br>",
+      "<span class='cmdhl'>help</span>        Provides '<span class='cmdhl'>help</span>' information for Magi commands.",
+      "<span class='cmdhl'>clear</span>       Clears the screen.",
+      "<span class='cmdhl'>whois</span>       Provides information about the author.",
+      "<br>"
+    ]
+  },
+  "clear": {
+    "noOutput": true
+  },
+  "whois": {
+
+  }
 }

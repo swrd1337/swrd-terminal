@@ -1,6 +1,8 @@
 {
-  "title": "Welcome to the <span style=\"color: #EF6065;\">swrd1337</span>'s terminal!",
+  "title": "Welcome to the <span class='user'>swrd1337</span>'s terminal!",
   "description": "Dark Souls 3  -  The Black Knight",
-  "author": "Alexei Bunazov -> swrd1337 (2022)",
-  "githubUrl": "https://github.com/swrd1337/swrd"
+  "author": "Alexei Bunazov (2022)",
+  "githubUrl": "https://github.com/swrd1337/swrd",
+  "username": "guest@swrd1337",
+  "terminalTitle": "Magi Terminal"
 }
