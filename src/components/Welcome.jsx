@@ -40,7 +40,7 @@ function Welcome({ onButtonClick }) {
           style={{ margin: 0 }}
           dangerouslySetInnerHTML={{ __html: MainInfo.title }}
         />
-        <p>{MainInfo.description}</p>
+        <p dangerouslySetInnerHTML={{__html: MainInfo.description}} />
       </motion.div>
 
       <MotionButton
