@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+  @font-face { 
+    font-family: 'FiraCode';
+    src: url('FiraCode-Light.woff') format('woff');
+  }
+
   * {
     box-sizing: border-box;
   }

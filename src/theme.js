@@ -12,7 +12,7 @@ const theme = {
     secondary: "#FF9FA2",
   },
   font: {
-    primary: `'Roboto Mono', monospace`,
+    primary: `'FiraCode', monospace`,
   },
   paper: {
     border: {
