@@ -2,7 +2,7 @@
   "help": {
     "messages": [
       "<br>",
-      "<span class='cmdhl'>help</span>             Provides '<span class='cmdhl'>help</span>' information for Magi commands.",
+      "<span class='cmdhl'>help</span>             Provides <span class='cmdhl'>help</span> information for Magi commands.",
       "<span class='cmdhl'>clear</span>            Clears the screen.",
       "<span class='cmdhl'>whois</span>            Display information about the author.",
       "<span class='cmdhl'>work</span>             Provides information about the work experience.",
@@ -83,6 +83,7 @@
       "[⌨️] Software Skills:",
       "    🔹Jira               <span class='skillscore'>[██████████  ]</span>",
       "    🔹MS Teams           <span class='skillscore'>[████████████]</span>",
+      "    🔹Jenkins CI         <span class='skillscore'>[████████    ]</span>",
       "    🔹Slack              <span class='skillscore'>[██████████  ]</span>",
       "    🔹VS Code            <span class='skillscore'>[██████████  ]</span>",
       "    🔹Eclipse            <span class='skillscore'>[█████████   ]</span>",
@@ -113,8 +114,8 @@
       "<span class='cmdhl'> ___/ / | |/ |/ // _, _// /_/ // / ___/ /___/ /  / /  </span>",
       "<span class='cmdhl'>/____/  |__/|__//_/ |_|/_____//_/ /____//____/  /_/   </span>",
       "                                         ",
-      "Welcome to the <span class='cmdhl'>swrd1337's terminal</span>!",
-      "For a list of available commands, type '<span class='cmdhl'>help</span>'.",
+      "Welcome to the <span class='cmdhl'>swrd1337</span>'s terminal!",
+      "For a list of available commands, type <span class='cmdhl'>help</span>.",
       "<br>"
     ]
   },

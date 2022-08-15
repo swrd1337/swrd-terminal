@@ -55,6 +55,10 @@ const GlobalStyles = createGlobalStyle`
     text-shadow: 0 0 5px ${({ theme }) => theme.textColor.primary};
   }
 
+  span.skillscore {
+    color: ${({ theme }) => theme.textColor.primary};
+  }
+
 `;
 
 export default GlobalStyles;
