@@ -6,37 +6,51 @@ import { useTheme } from "styled-components";
 import TerminalBody from "./TerminalBody";
 import { DialogHeading } from "./styles/Typography";
 import { terminalTitle } from "../resources/mainInfo.json";
+import { useEffect, useRef, useState } from 'react';
 
 const MotionGlassPaper = motion(GlassPaper);
 
-function TerminalWindow({ ref, openTerminal, onClose }) {
+function TerminalWindow({ openTerminal, onClose, boundaries }) {
+  const terminalRef = useRef();
   const theme = useTheme();
   const dragControls = useDragControls();
 
+  const [dragConstraints, setDragConstraints] = useState({});
+
+  useEffect(() => {
+    if (boundaries && terminalRef) {
+      const { width, height } = boundaries;
+      const { current: {scrollWidth, scrollHeight} } = terminalRef;
+      const w = (width - scrollWidth) / 2;
+      const h = (height - scrollHeight) / 2;
+
+      setDragConstraints({
+        left: -(w - 2), // 2 stands for 'border width' in px.
+        right: w - 2,
+        top: -(h - 2), 
+        bottom: h - 2,
+      })
+
+    }
+  }, [terminalRef, openTerminal]);
+
   return (
     <MotionGlassPaper
-      ref={ref}
+      ref={terminalRef}
       initial={{
         y: -1000,
-        display: "none",
       }}
       animate={{
         y: openTerminal ? 0 : -1000,
         opacity: openTerminal ? 1 : 0,
         position: openTerminal ? "unset" : "absolute",
-        display: openTerminal ? "block" : "none",
       }}
       drag
       dragControls={dragControls}
       dragListener={false}
       dragMomentum={false}
-      dragElastic={0.1}
-      dragConstraints={{
-        left: -50,
-        right: 50,
-        top: -50,
-        bottom: 50,
-      }}
+      dragElastic={0}
+      dragConstraints={dragConstraints}
     >
       <FlexContainer
         onPointerDown={(e) => {
@@ -58,7 +72,7 @@ function TerminalWindow({ ref, openTerminal, onClose }) {
         </FlexContainer>
         <CloseIcon onClick={onClose} />
       </FlexContainer>
-      <TerminalBody />
+      <TerminalBody openTerminal={openTerminal} />
     </MotionGlassPaper>
   );
 }

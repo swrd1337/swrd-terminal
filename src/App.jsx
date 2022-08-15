@@ -3,11 +3,24 @@ import { BackgroundImage } from "./components/styles/Image";
 import Welcome from "./components/Welcome";
 import Footer from "./components/Footer";
 import TerminalWindow from "./components/TerminalWindow";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 function App() {
   const [openTerminal, setOpenTerminal] = useState(false);
+
+  const containerRef = useRef();
+
+  const [boundaries, setBoundaries] = useState();
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setBoundaries({
+        height: containerRef.current.scrollHeight,
+        width: containerRef.current.scrollWidth,
+      })
+    }
+  }, []);
 
   const onOpenClickHandler = () => setOpenTerminal(!openTerminal);
 
@@ -19,6 +32,7 @@ function App() {
           justifyContent="center"
           alignItems="center"
           flexDir="column"
+          ref={containerRef}
         >
           <BackgroundImage
             src="./eva_bg.gif"
@@ -35,6 +49,7 @@ function App() {
           <TerminalWindow
             openTerminal={openTerminal}
             onClose={onOpenClickHandler}
+            boundaries={boundaries}
           />
         </FlexContainer>
       </main>

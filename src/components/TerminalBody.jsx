@@ -8,7 +8,7 @@ import { CLEAR } from "../constants/commandTypes";
 import { Typography } from "./styles/Typography";
 import { getCommandOutput } from "./utils/cliUtils";
 
-function TerminalBody() {
+function TerminalBody({ openTerminal }) {
   const inputFocus = useRef(null);
 
   const [command, setCommand] = useState("");
@@ -28,7 +28,7 @@ function TerminalBody() {
     if (inputFocus.current) {
       inputFocus.current.focus();
     }
-  }, [inputFocus]);
+  }, [inputFocus, openTerminal]);
 
   const inputChangeHandler = ({ target: { value } }) => {
     setCommand(value);
