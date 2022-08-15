@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
       }
       white-space: pre-wrap;
     }
+
+    a {
+      color: ${({ theme }) => theme.accent.secondary};
+    }
   }
 
   button {
@@ -39,6 +43,11 @@ const GlobalStyles = createGlobalStyle`
   span.cmdhl {
     color: ${({ theme }) => theme.accent.primary};
     text-shadow: 0 0 5px ${({ theme }) => theme.accent.primary};
+  }
+
+  span.listhd {
+    color: ${({ theme }) => theme.textColor.primary};
+    text-shadow: 0 0 5px ${({ theme }) => theme.textColor.primary};
   }
 
 `;

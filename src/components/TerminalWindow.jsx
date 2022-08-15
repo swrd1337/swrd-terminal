@@ -8,9 +8,17 @@ import { DialogHeading } from "./styles/Typography";
 import { terminalTitle } from "../resources/mainInfo.json";
 import { useEffect, useRef, useState } from 'react';
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
 const MotionGlassPaper = motion(GlassPaper);
 
-function TerminalWindow({ openTerminal, onClose, boundaries }) {
+function TerminalWindow({ openTerminal, onClose }) {
   const terminalRef = useRef();
   const theme = useTheme();
   const dragControls = useDragControls();
@@ -18,11 +26,11 @@ function TerminalWindow({ openTerminal, onClose, boundaries }) {
   const [dragConstraints, setDragConstraints] = useState({});
 
   useEffect(() => {
-    if (boundaries && terminalRef) {
-      const { width, height } = boundaries;
+    if (terminalRef) {
+      const { width, height } = getWindowDimensions();
       const { current: {scrollWidth, scrollHeight} } = terminalRef;
-      const w = (width - scrollWidth) / 2;
-      const h = (height - scrollHeight) / 2;
+      const w = Math.round((width - scrollWidth) / 2);
+      const h = Math.round((height - scrollHeight) / 2);
 
       setDragConstraints({
         left: -(w - 2), // 2 stands for 'border width' in px.
@@ -30,9 +38,8 @@ function TerminalWindow({ openTerminal, onClose, boundaries }) {
         top: -(h - 2), 
         bottom: h - 2,
       })
-
     }
-  }, [terminalRef, openTerminal]);
+  }, [openTerminal]);
 
   return (
     <MotionGlassPaper

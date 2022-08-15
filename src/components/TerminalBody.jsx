@@ -4,21 +4,33 @@ import { CliInput } from "./styles/Cli";
 import { ContentBody } from "./styles/Paper";
 import AnimatedCursor from "./AnimatedCursor";
 import { CommandBody } from "./styles/Cli";
-import { CLEAR } from "../constants/commandTypes";
+import ActionCommandTypes from "../constants/ActionCommandTypes";
 import { Typography } from "./styles/Typography";
-import { getCommandOutput } from "./utils/cliUtils";
+import { getCommandOutput, getHistoryOutput } from "./utils/cliUtils";
+import ActionKeys from "../constants/ActionKeys";
+import Commands from "../resources/commands.json"
 
 function TerminalBody({ openTerminal }) {
   const inputFocus = useRef(null);
 
   const [command, setCommand] = useState("");
-  const [output, setOutput] = useState([]);
+  const [output, setOutput] = useState([...Commands.cover.messages]);
+  const [history, setHistory] = useState({
+    pos: -1,
+    commands: [],
+  });
 
   useEffect(() => {
     if (inputFocus.current) {
       inputFocus.current.focus();
     }
   }, [inputFocus]);
+
+  useEffect(() => {
+    if (inputFocus.current) {
+      inputFocus.current.scrollIntoView();
+    }
+  }, [output])
 
   const outsiteClickHandler = () => {
     inputFocus.current.focus();
@@ -35,18 +47,74 @@ function TerminalBody({ openTerminal }) {
   };
 
   const inputEnterHandler = ({ key }) => {
-    if (key === "Enter") {
-      if (command === CLEAR) {
-        setOutput([]);
-      } else {
-        const commandOut = getCommandOutput(command);
-        setOutput([
-          ...output,
-          <CommandBody>{command}</CommandBody>,
-          ...commandOut,
-        ]);
-      }
+    if (key === ActionKeys.ENTER) {
+      onEnter();
+    }
+  };
+
+  const upPressHandler = (e) => {
+    if (e.key === ActionKeys.ARROW_UP) {
+      e.preventDefault();
+      onArrowUp();
+    }
+    if (e.key === ActionKeys.ARROW_DOWN) {
+      onArrowDown();
+    }
+  };
+
+  const onEnter = () => {
+    if (command) {
+      setHistory({
+        commands: [...history.commands, command],
+        pos: history.commands.length + 1,
+      });
+    }
+    executeCommand();
+    setCommand("");
+  };
+
+  const executeCommand = () => {
+    const lastCmdElement = <CommandBody>{command}</CommandBody>;
+    if (command === ActionCommandTypes.CLEAR) {
+      setOutput([]);
+    } else if (command === ActionCommandTypes.HISTORY) {
+      const historyOutput = getHistoryOutput(history.commands);
+      setOutput([...output, lastCmdElement, ...historyOutput]);
+    } else if (command) {
+      const commandOut = getCommandOutput(command);
+      setOutput([...output, lastCmdElement, ...commandOut]);
+    } else {
+      setOutput([...output, lastCmdElement]);
+    }
+  };
+
+  const onArrowUp = () => {
+    const newPos = history.pos - 1;
+    if (newPos >= 0) {
+      const historyCmd = history.commands[newPos];
+      setCommand(historyCmd);
+      setHistory({
+        ...history,
+        pos: newPos,
+      });
+    }
+  };
+
+  const onArrowDown = () => {
+    const newPos = history.pos + 1;
+    if (newPos < history.commands.length) {
+      const historyCmd = history.commands[newPos];
+      setCommand(historyCmd);
+      setHistory({
+        ...history,
+        pos: newPos,
+      });
+    } else {
       setCommand("");
+      setHistory({
+        ...history,
+        pos: history.commands.length,
+      });
     }
   };
 
@@ -70,6 +138,7 @@ function TerminalBody({ openTerminal }) {
           onChange={inputChangeHandler}
           value={command}
           onKeyPress={inputEnterHandler}
+          onKeyDown={upPressHandler}
         />
         <CommandBody>{command}</CommandBody>
         <AnimatedCursor />

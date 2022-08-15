@@ -1,16 +1,19 @@
-import { HELP } from '../../constants/commandTypes';
 import Commands from "../../resources/commands";
-import { COMMAND_NOT_FOUND } from '../../constants/errorMessages'
+import ErrorMessages from "../../constants/ErrorMessages";
 
 export function getCommandOutput(command) {
   let output = null;
-  switch (command) {
-    case HELP:
-      output = Commands[HELP].messages;
-      break;
-    default:
-      output = [COMMAND_NOT_FOUND];
-      break;
+  const commandData = Commands[command];
+  if (commandData && !commandData.noOutput) {
+    output = commandData.messages;
+  } else {
+    output = [ErrorMessages.COMMAND_NOT_FOUND];
   }
+
   return output;
+}
+
+export function getHistoryOutput(historyList) {
+  let output =  historyList.map(entry => `<span class='cmdhl'>${entry}</span>`);
+  return ["<br>", ...output, "<br>"];
 }
