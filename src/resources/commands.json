@@ -7,6 +7,7 @@
       "<span class='cmdhl'>whois</span>            Display information about the author.",
       "<span class='cmdhl'>work</span>             Provides information about the work experience.",
       "<span class='cmdhl'>education</span>        Display information about the education.",
+      "<span class='cmdhl'>skills</span>           View skills.",
       "<span class='cmdhl'>contact</span>          Provides the contact information.",
       "<span class='cmdhl'>cover</span>            Display the header.",
       "<span class='cmdhl'>projects</span>         View coding projects.",
@@ -33,20 +34,20 @@
     "messages": [
       "<br>",
       "<span class='listhd'>Work Experience</span>",
-      "🌕Full Stack Software Developer",
-      "    🌑Duration: Octomber 2018 - Present",
-      "    🌑Company: SyncroSoft SRL",
-      "    🌑Tasks:",
+      "[🏢] Full Stack Software Developer",
+      "    [1] Duration: Octomber 2018 - Present",
+      "    [2] Company: SyncroSoft SRL",
+      "    [3] Tasks:",
       "        🔹Developing and maintaining web applications.",
       "        🔹Creating and maintaining APIs.",
       "        🔹Creating and maintaining databases.",
       "        🔹Leading small projects.",
       "        🔹Helping other developers.",
       "        🔹Bug fixing.",
-      "🌕Intern",
-      "    🌑Duration: July 2018 - Octomber 2018",
-      "    🌑Company: SyncroSoft SRL",
-      "    🌑Tasks:",
+      "[🏢] Intern",
+      "    [1] Duration: July 2018 - Octomber 2018",
+      "    [2] Company: SyncroSoft SRL",
+      "    [3] Tasks:",
       "        🔹Developing and maintaining a plugin for a web application.",
       "        🔹Bug fixing.",
       "<br>"
@@ -56,46 +57,87 @@
     "messages": [
       "<br>",
       "<span class='listhd'>Education</span>",
-      "✅Master's Degree",
+      "[🎓] Master's Degree",
       "    🔹Craiova University, Faculty of Automation, Computers and Electronics",
       "    🔹Dep: Software Engineering",
       "    🔹2020 - 2022",
-      "✅Bachelor's Degree",
+      "[🎓] Bachelor's Degree",
       "    🔹Craiova University, Faculty of Science",
       "    🔹Dep: Computer Science",
       "    🔹2017 - 2020",
       "<br>"
     ]
   },
+  "skills": {
+    "messages": [
+      "<br>",
+      "<span class='listhd'>Skills</span>",
+      "[🧪] Development Skills:",
+      "    🔹JavaScript ES6+    <span class='skillscore'>[███████████ ]</span>",
+      "    🔹React 16+          <span class='skillscore'>[██████████  ]</span>",
+      "    🔹Java 8+            <span class='skillscore'>[███████████ ]</span>",
+      "    🔹Spring Boot 2+     <span class='skillscore'>[█████████   ]</span>",
+      "    🔹PostgreSQL         <span class='skillscore'>[███████     ]</span>",
+      "    🔹MySQL              <span class='skillscore'>[███████     ]</span>",
+      "    🔹Git                <span class='skillscore'>[█████████   ]</span>",
+      "[⌨️] Software Skills:",
+      "    🔹Jira               <span class='skillscore'>[██████████  ]</span>",
+      "    🔹MS Teams           <span class='skillscore'>[████████████]</span>",
+      "    🔹Slack              <span class='skillscore'>[██████████  ]</span>",
+      "    🔹VS Code            <span class='skillscore'>[██████████  ]</span>",
+      "    🔹Eclipse            <span class='skillscore'>[█████████   ]</span>",
+      "    🔹GitHub             <span class='skillscore'>[██████████  ]</span>",
+      "    🔹GitLab             <span class='skillscore'>[████████    ]</span>",
+      "[📖] Language Skills:",
+      "    🔹Romanian           <span class='skillscore'>[████████████]</span>",
+      "    🔹English            <span class='skillscore'>[████████    ]</span>",
+      "    🔹Russian            <span class='skillscore'>[██████████  ]</span>",
+      "<br>"
+
+    ]
+  },
   "contact": {
     "messages": [
       "<br>",
       "<span class='listhd'>Contact Information</span>",
-      "🌎LinkedIn: <a href='https://www.linkedin.com/in/alexei-bunazov-921250185' target='_blank'>Alexei Bunazov</a>",
-      "📬Email: <a href='mailto: alexeyorc@gmail.com'>alexeyorc@gmail.com</a>",
+      "[🚀] LinkedIn: <a href='https://www.linkedin.com/in/alexei-bunazov-921250185' target='_blank'>Alexei Bunazov</a>",
+      "[🗃️] Email:    <a href='mailto: alexeyorc@gmail.com'>alexeyorc@gmail.com</a>",
       "<br>"
     ]
   },
   "cover": {
     "messages": [
-      "<span class='cmdhl'>   __  ______  _________  _______   ____ </span>",
-      "<span class='cmdhl'>  /  |/  / _ |/ ___/  _/ / ___/ /  /  _/ </span>",
-      "<span class='cmdhl'> / /|_/ / __ / (_ // /  / /__/ /___/ /   </span>",
-      "<span class='cmdhl'>/_/  /_/_/ |_\\___/___/  \\___/____/___/ </span>",
+      "<span class='cmdhl'>   _____ _       __ ____   ____  ___ _____ _____ _____</span>",
+      "<span class='cmdhl'>  / ___/| |     / // __ \\ / __ \\<  /|__  /|__  //__  /</span>",
+      "<span class='cmdhl'>  \\__ \\ | | /| / // /_/ // / / // /  /_ <  /_ <   / / </span>",
+      "<span class='cmdhl'> ___/ / | |/ |/ // _, _// /_/ // / ___/ /___/ /  / /  </span>",
+      "<span class='cmdhl'>/____/  |__/|__//_/ |_|/_____//_/ /____//____/  /_/   </span>",
       "                                         ",
-      "Welcome to the <span class='cmdhl'>Magi Terminal</span>!",
+      "Welcome to the <span class='cmdhl'>swrd1337's terminal</span>!",
       "For a list of available commands, type '<span class='cmdhl'>help</span>'.",
       "<br>"
     ]
   },
   "projects": {
     "messages": [
-
+      "<br>",
+      "<span class='listhd'>Personal Projects</span>",
+      "[👹] <a href='https://github.com/swrd1337/sokudo' target='_blank'>Sokudo</a> - Agile project manager for developers.",
+      "[⌨️] <a href='https://github.com/swrd1337/swrd-terminal' target='_blank'>swrd-terminal</a> - Terminal like portfolio.",
+      "[📰] <a href='https://github.com/swrd1337/cs-projects/tree/master/quitter' target='_blank'>Quitter</a> - Mini <i>Twitter</i> clone with memes.",
+      "[🎓] <a href='https://github.com/swrd1337/cs-projects' target='_blank'>cs-projects</a> - More personal projects.",
+      "<br>"
     ]
   },
   "social": {
     "messages": [
-      
+      "<br>",
+      "<span class='listhd'>Contact Information</span>",
+      "[🚀] Me on <a href='https://www.linkedin.com/in/alexei-bunazov-921250185' target='_blank'>LinkedIn</a>",
+      "[😺] Also me on <a href='https://github.com/swrd1337'>GitHub</a>",
+      "<br>"
     ]
   }
 }
+
+
