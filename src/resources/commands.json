@@ -2,9 +2,16 @@
   "help": {
     "messages": [
       "<br>",
-      "<span class='cmdhl'>help</span>        Provides '<span class='cmdhl'>help</span>' information for Magi commands.",
-      "<span class='cmdhl'>clear</span>       Clears the screen.",
-      "<span class='cmdhl'>whois</span>       Provides information about the author.",
+      "<span class='cmdhl'>help</span>             Provides '<span class='cmdhl'>help</span>' information for Magi commands.",
+      "<span class='cmdhl'>clear</span>            Clears the screen.",
+      "<span class='cmdhl'>whois</span>            Display information about the author.",
+      "<span class='cmdhl'>work</span>             Provides information about the work experience.",
+      "<span class='cmdhl'>education</span>        Display information about the education.",
+      "<span class='cmdhl'>contact</span>          Provides the contact information.",
+      "<span class='cmdhl'>cover</span>            Display the header.",
+      "<span class='cmdhl'>projects</span>         View coding projects.",
+      "<span class='cmdhl'>social</span>           Display social networks.",
+      "<span class='cmdhl'>history</span>          View command history.",
       "<br>"
     ]
   },
@@ -12,6 +19,83 @@
     "noOutput": true
   },
   "whois": {
+    "messages": [
+      "<br>",
+      "Hi, I'm <span class='cmdhl'>Alexei</span>. Nice to meet you! 😊",
+      "<br>",
+      "I'm a <span class='cmdhl'>Full Stack Software Developer</span> who builds engaging websites like this one and I also enjoy bringing new ideas to life.",
+      "<br>",
+      "I hope you will enjoy using my site!",
+      "<br>"
+    ]
+  },
+  "work": {
+    "messages": [
+      "<br>",
+      "<span class='listhd'>Work Experience</span>",
+      "🌕Full Stack Software Developer",
+      "    🌑Duration: Octomber 2018 - Present",
+      "    🌑Company: SyncroSoft SRL",
+      "    🌑Tasks:",
+      "        🔹Developing and maintaining web applications.",
+      "        🔹Creating and maintaining APIs.",
+      "        🔹Creating and maintaining databases.",
+      "        🔹Leading small projects.",
+      "        🔹Helping other developers.",
+      "        🔹Bug fixing.",
+      "🌕Intern",
+      "    🌑Duration: July 2018 - Octomber 2018",
+      "    🌑Company: SyncroSoft SRL",
+      "    🌑Tasks:",
+      "        🔹Developing and maintaining a plugin for a web application.",
+      "        🔹Bug fixing.",
+      "<br>"
+    ]
+  },
+  "education": {
+    "messages": [
+      "<br>",
+      "<span class='listhd'>Education</span>",
+      "✅Master's Degree",
+      "    🔹Craiova University, Faculty of Automation, Computers and Electronics",
+      "    🔹Dep: Software Engineering",
+      "    🔹2020 - 2022",
+      "✅Bachelor's Degree",
+      "    🔹Craiova University, Faculty of Science",
+      "    🔹Dep: Computer Science",
+      "    🔹2017 - 2020",
+      "<br>"
+    ]
+  },
+  "contact": {
+    "messages": [
+      "<br>",
+      "<span class='listhd'>Contact Information</span>",
+      "🌎LinkedIn: <a href='https://www.linkedin.com/in/alexei-bunazov-921250185' target='_blank'>Alexei Bunazov</a>",
+      "📬Email: <a href='mailto: alexeyorc@gmail.com'>alexeyorc@gmail.com</a>",
+      "<br>"
+    ]
+  },
+  "cover": {
+    "messages": [
+      "<span class='cmdhl'>   __  ______  _________  _______   ____ </span>",
+      "<span class='cmdhl'>  /  |/  / _ |/ ___/  _/ / ___/ /  /  _/ </span>",
+      "<span class='cmdhl'> / /|_/ / __ / (_ // /  / /__/ /___/ /   </span>",
+      "<span class='cmdhl'>/_/  /_/_/ |_\\___/___/  \\___/____/___/ </span>",
+      "                                         ",
+      "Welcome to the <span class='cmdhl'>Magi Terminal</span>!",
+      "For a list of available commands, type '<span class='cmdhl'>help</span>'.",
+      "<br>"
+    ]
+  },
+  "projects": {
+    "messages": [
 
+    ]
+  },
+  "social": {
+    "messages": [
+      
+    ]
   }
 }
