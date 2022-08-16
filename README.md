@@ -9,7 +9,6 @@
     Placeholder
   </p>
 </div>
-<a name="readme-top"></a>
 
 ## Short Demonstration
 <div align="center">
@@ -54,9 +53,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](./LICENSE)
-
-
-<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
 <!-- Header -->
 [contributors-shield]: https://img.shields.io/github/contributors/swrd1337/swrd-terminal.svg?style=for-the-badge
