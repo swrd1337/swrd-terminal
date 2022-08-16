@@ -4,12 +4,12 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <div align="center">
-  <a name="readme-top"></a>
   <h1>⌨️ swrd-terminal</h1>
   <p align="center"></p>
     Placeholder
   </p>
 </div>
+<a name="readme-top"></a>
 
 ## Short Demonstration
 <div align="center">
