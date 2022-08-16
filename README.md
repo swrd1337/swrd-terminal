@@ -13,12 +13,13 @@
 
 <a name="readme-top"></a>
 
+## Short Demonstration
+<div align="center">
+  <img src="./doc/demo.gif" alt="Demo">
+</div>
 
-### Demo
 
-![Demo](./doc/demo.gif)
-
-### Built With
+## Built With
 
 * [![React][React.js]][React-url]
 * [![Vite][Vite]][Vite-url]
@@ -43,6 +44,7 @@ npx vite --port=<your_port>
 
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Acknowledgments
@@ -52,6 +54,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 * [React Icons](https://react-icons.github.io/react-icons)
 
 ## License
+
 [MIT](./LICENSE)
 
 
