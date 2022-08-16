@@ -47,7 +47,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Acknowledgments
 
-* [Vercel](https://pages.github.com)
+* [Vercel](https://vercel.com)
 * [FiraCode](https://github.com/tonsky/FiraCode)
 * [React Icons](https://react-icons.github.io/react-icons)
 
