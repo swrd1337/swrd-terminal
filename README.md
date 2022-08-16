@@ -3,21 +3,18 @@
 [![Stargazers][stars-shield]][stars-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
 <div align="center">
-  <h1>⌨️ swrd terminal</h1>
+  <a name="readme-top"></a>
+  <h1>⌨️ swrd-terminal</h1>
   <p align="center"></p>
     Placeholder
   </p>
 </div>
 
-<a name="readme-top"></a>
-
 ## Short Demonstration
 <div align="center">
   <img src="./doc/demo.gif" alt="Demo">
 </div>
-
 
 ## Built With
 
@@ -40,7 +37,8 @@ Run application with:
 npx vite --port=<your_port>
 ```
 
-## Usage
+## Personalization
+
 
 
 ## Contributing
@@ -62,13 +60,13 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 <!-- Header -->
 [contributors-shield]: https://img.shields.io/github/contributors/swrd1337/swrd-terminal.svg?style=for-the-badge
-[contributors-url]: https://github.com/oswrd1337/swrd-terminal/graphs/contributors
+[contributors-url]: https://github.com/swrd1337/swrd-terminal/graphs/contributors
 
 [forks-shield]: https://img.shields.io/github/forks/swrd1337/swrd-terminal?style=for-the-badge
 [forks-url]: https://github.com/swrd1337/swrd-terminal/network/members
 
 [stars-shield]: https://img.shields.io/github/stars/swrd1337/swrd-terminal.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/swrd-terminal/stargazers
+[stars-url]: https://github.com/swrd1337/swrd-terminal/stargazers
 
 [linkedin-shield]: https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://www.linkedin.com/in/alexei-bunazov-921250185
