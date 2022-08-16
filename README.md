@@ -6,7 +6,7 @@
 <div align="center">
   <h1>⌨️ swrd-terminal</h1>
   <p align="center"></p>
-    Placeholder
+    A terminal style portfolio website built with <b>React</b>
   </p>
 </div>
 
@@ -38,6 +38,23 @@ npx vite --port=<your_port>
 
 ## Personalization
 
+To change output data from commands edit the following file (check out `messages` fields):
+
+```bash
+ ./src/resources/commands.json
+```
+
+To change the main information displayed on the app (e.g.: *description*, *author*, *githubUrl*) check the following file:
+
+```bash
+ ./src/resources/mainInfo.json
+```
+
+If you want to update theme colors see:
+
+```bash
+ ./src/theme.js
+```
 
 
 ## Contributing
