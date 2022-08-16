@@ -49,6 +49,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 * [Vercel](https://vercel.com)
 * [FiraCode](https://github.com/tonsky/FiraCode)
 * [React Icons](https://react-icons.github.io/react-icons)
+* [json-loader](https://www.npmjs.com/package/json-loader)
 
 ## License
 
