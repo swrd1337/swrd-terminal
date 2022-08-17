@@ -36,6 +36,16 @@ Run application with:
 npx vite --port=<your_port>
 ```
 
+Deploy on *Vercel*:
+1. Install the CLI tool.
+```bash
+npm install -g vercel
+```
+2. Run through configuration via the following command.
+```bash
+vercel
+```
+
 ## Personalization
 
 To change output data from commands edit the following file (check out `messages` fields):
