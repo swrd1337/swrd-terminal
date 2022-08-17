@@ -12,7 +12,7 @@
 
 ## Short Demonstration
 <div align="center">
-  <img src="./doc/demo.gif" alt="Demo">
+  <img src="./doc/demo.webp" alt="Demo">
 </div>
 
 ## Built With
@@ -34,6 +34,16 @@ npm install
 Run application with:
 ```bash
 npx vite --port=<your_port>
+```
+
+Deploy on *Vercel*:
+1. Install the CLI tool.
+```bash
+npm install -g vercel
+```
+2. Run through configuration via the following command.
+```bash
+vercel
 ```
 
 ## Personalization

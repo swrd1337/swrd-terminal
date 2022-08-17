@@ -21,7 +21,7 @@ function App() {
           flexDir="column"
         >
           <BackgroundImage
-            src="./eva_bg.gif"
+            src="./eva_bg.webp"
             alt="Evangelion blur background"
           />
           <motion.div
