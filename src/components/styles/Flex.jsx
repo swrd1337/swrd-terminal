@@ -9,4 +9,10 @@ export const FlexContainer = styled.div`
   align-items: ${({ alignItems }) => alignItems || "unset"};
   height: ${({ h }) => h};
   padding: ${({ p }) => p};
+
+  @media (max-width: 768px) {
+    ${({ responsive }) => responsive && `
+      align-items: start;
+    `}
+  }
 `;

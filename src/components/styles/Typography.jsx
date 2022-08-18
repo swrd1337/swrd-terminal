@@ -20,4 +20,8 @@ export const Typography = styled.p`
   font-size: 16px;
   font-weight: 600;
   text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
