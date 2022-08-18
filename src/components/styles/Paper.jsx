@@ -12,12 +12,15 @@ export const GlassPaper = styled.div`
   flex-direction: column;
   position: absolute;
   
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme}) => theme.breakpoints.tablet}px) {
+    width: 40em;
+    top: 5em;
+  }
+
+  @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
     width: 100%;
     height: 50%;
-    ${({ top }) => top && `
-      top: 15px;
-    `}
+    top: 15px;
   }
 `;
 

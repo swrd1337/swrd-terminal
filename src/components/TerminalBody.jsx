@@ -9,9 +9,11 @@ import { Typography } from "./styles/Typography";
 import { getCommandOutput, getHistoryOutput } from "./utils/cliUtils";
 import ActionKeys from "../constants/ActionKeys";
 import Commands from "../resources/commands.json"
+import { useTheme } from 'styled-components';
 
 function TerminalBody({ openTerminal }) {
   const inputFocus = useRef(null);
+  const theme = useTheme();
 
   const [command, setCommand] = useState("");
   const [output, setOutput] = useState([...Commands.cover.messages]);
@@ -22,12 +24,13 @@ function TerminalBody({ openTerminal }) {
 
   useEffect(() => {
     if (inputFocus.current) {
+      console.log(window.innerWidth)
       inputFocus.current.focus();
     }
   }, [inputFocus]);
 
   useEffect(() => {
-    if (inputFocus.current) {
+    if (inputFocus.current && window.innerWidth > theme.breakpoints.tablet) {
       inputFocus.current.scrollIntoView();
     }
   }, [output])

@@ -21,7 +21,7 @@ export const Typography = styled.p`
   font-weight: 600;
   text-align: left;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
     font-size: 14px;
   }
 `;

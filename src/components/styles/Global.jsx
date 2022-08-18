@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
 
     h1, h2, p {
-      @media (max-width: 768px) {
+      @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
         text-align: center;
       }
       white-space: pre-wrap;
@@ -60,7 +60,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   span.cover {
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
       display: none;
     }
   }

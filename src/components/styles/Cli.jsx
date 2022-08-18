@@ -31,7 +31,7 @@ export const CommandBody = styled.div`
   font-weight: 600;
   cursor: text;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
     font-size: 14px;
   }
 `

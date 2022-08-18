@@ -22,6 +22,10 @@ const theme = {
       primary: "#081616b0",
     },
   },
+  breakpoints: {
+    mobile: 768,
+    tablet: 1024,
+  }
 };
 
 export default theme;

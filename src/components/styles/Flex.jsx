@@ -10,7 +10,7 @@ export const FlexContainer = styled.div`
   height: ${({ h }) => h};
   padding: ${({ p }) => p};
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
     ${({ responsive }) => responsive && `
       align-items: start;
     `}
