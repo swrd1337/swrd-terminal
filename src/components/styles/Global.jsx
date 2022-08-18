@@ -59,6 +59,12 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.textColor.primary};
   }
 
+  span.cover {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
 `;
 
 export default GlobalStyles;

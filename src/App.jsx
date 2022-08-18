@@ -19,6 +19,7 @@ function App() {
           justifyContent="center"
           alignItems="center"
           flexDir="column"
+          responsive={true}
         >
           <BackgroundImage
             src="./eva_bg.webp"

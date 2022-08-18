@@ -108,11 +108,11 @@
   },
   "cover": {
     "messages": [
-      "<span class='cmdhl'>   _____ _       __ ____   ____  ___ _____ _____ _____</span>",
-      "<span class='cmdhl'>  / ___/| |     / // __ \\ / __ \\<  /|__  /|__  //__  /</span>",
-      "<span class='cmdhl'>  \\__ \\ | | /| / // /_/ // / / // /  /_ <  /_ <   / / </span>",
-      "<span class='cmdhl'> ___/ / | |/ |/ // _, _// /_/ // / ___/ /___/ /  / /  </span>",
-      "<span class='cmdhl'>/____/  |__/|__//_/ |_|/_____//_/ /____//____/  /_/   </span>",
+      "<span class='cmdhl cover'>   _____ _       __ ____   ____  ___ _____ _____ _____</span>",
+      "<span class='cmdhl cover'>  / ___/| |     / // __ \\ / __ \\<  /|__  /|__  //__  /</span>",
+      "<span class='cmdhl cover'>  \\__ \\ | | /| / // /_/ // / / // /  /_ <  /_ <   / / </span>",
+      "<span class='cmdhl cover'> ___/ / | |/ |/ // _, _// /_/ // / ___/ /___/ /  / /  </span>",
+      "<span class='cmdhl cover'>/____/  |__/|__//_/ |_|/_____//_/ /____//____/  /_/   </span>",
       "                                         ",
       "Welcome to the <span class='cmdhl'>swrd1337</span>'s terminal!",
       "For a list of available commands, type <span class='cmdhl'>help</span>.",

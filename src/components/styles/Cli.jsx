@@ -20,14 +20,18 @@ export const CliCursor = styled.span`
 `;
 
 export const CommandBody = styled.div`
+  &::before {
+    content: '${username}';
+    color: #d7d7d7;
+    margin-right: 10px;
+  }
+  
   font-size: 16px;
   color: ${({ theme }) => theme.textColor.primary};
   font-weight: 600;
   cursor: text;
 
-  &::before {
-    content: '${username}';
-    color: #d7d7d7;
-    margin-right: 10px;
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 `

@@ -10,9 +10,14 @@ export const GlassPaper = styled.div`
   z-index: 2;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  
   @media (max-width: 768px) {
     width: 100%;
-    height: 90%;
+    height: 50%;
+    ${({ top }) => top && `
+      top: 15px;
+    `}
   }
 `;
 

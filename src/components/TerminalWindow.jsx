@@ -44,13 +44,13 @@ function TerminalWindow({ openTerminal, onClose }) {
   return (
     <MotionGlassPaper
       ref={terminalRef}
+      top={true}
       initial={{
         y: -1000,
       }}
       animate={{
         y: openTerminal ? 0 : -1000,
         opacity: openTerminal ? 1 : 0,
-        position: openTerminal ? "unset" : "absolute",
       }}
       drag
       dragControls={dragControls}
