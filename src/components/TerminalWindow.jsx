@@ -66,7 +66,10 @@ function TerminalWindow({ openTerminal, onClose }) {
         justifyContent="space-between"
         alignItems="center"
         p="5px"
-        style={{ borderBottom: `1px solid ${theme.paper.border.primary}` }}
+        style={{
+          borderBottom: `1px solid ${theme.paper.border.primary}`,
+          cursor: 'grab'
+        }}
       >
         <FlexContainer w="100%" justifyContent="center">
           <DialogHeading>
