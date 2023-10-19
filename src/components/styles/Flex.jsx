@@ -9,6 +9,7 @@ export const FlexContainer = styled.div`
   align-items: ${({ alignItems }) => alignItems || "unset"};
   height: ${({ h }) => h};
   padding: ${({ p }) => p};
+  user-select: none;
 
   @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
     ${({ responsive }) => responsive && `
