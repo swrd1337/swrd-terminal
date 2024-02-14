@@ -24,7 +24,6 @@ function TerminalBody({ openTerminal }) {
 
   useEffect(() => {
     if (inputFocus.current) {
-      console.log(window.innerWidth)
       inputFocus.current.focus();
     }
   }, [inputFocus]);
