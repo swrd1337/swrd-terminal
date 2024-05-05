@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import TerminalWindow from "./components/TerminalWindow";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [openTerminal, setOpenTerminal] = useState(false);
@@ -39,7 +38,6 @@ function App() {
             onClose={onOpenClickHandler}
           />
         </FlexContainer>
-        <Analytics />
       </main>
       <Footer />
     </>
