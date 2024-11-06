@@ -1,19 +1,71 @@
-import { useState } from "react";
-import { OutlinedButton } from "./styles/Button";
-import { FlexContainer } from "./styles/Flex";
-import { motion } from "framer-motion";
-import MainInfo from "../resources/mainInfo";
-import { Headline } from "./styles/Typography";
-
-const MotionButton = motion(OutlinedButton);
+import { FlexContainer } from './styles/Flex';
+import { motion } from 'framer-motion';
+import MainInfo from '../resources/mainInfo';
+import { Headline } from './styles/Typography';
+import styled from 'styled-components';
+import { media } from './styles/breakpoints';
 
 const MotionFlex = motion(FlexContainer);
 
-function Welcome({ onButtonClick }) {
-  const [buttonHover, setButtonHover] = useState(false);
+const TerminalButton = motion(styled.button`
+  background-color: transparent;
+  border: 2px solid ${({ theme }) => theme.textColor.primary};
+  color: ${({ theme }) => theme.textColor.primary};
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px;
+  max-width: 210px;
+  margin: 10px;
 
-  const onEnterHandler = () => setButtonHover(true);
-  const onLeaveHandler = () => setButtonHover(false);
+  &:hover {
+    cursor: pointer;
+    background-color: #87c7bd24;
+  }
+`);
+
+const ResumeButton = motion(styled.button`
+  background-color: transparent;
+  border: none;
+  border-radius: 12px;
+  color: ${({ theme }) => theme.textColor.primary};
+  font-weight: 600;
+  padding: 10px;
+  margin: 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #87c7bd24;
+  }
+`);
+
+const ArrowButton = motion(styled.button`
+  background-color: transparent;
+  border: none;
+  border-radius: 36px;
+  color: ${({ theme }) => theme.textColor.primary};
+  padding: 20px;
+  &:hover {
+    cursor: pointer;
+    background-color: #87c7bd24;
+  }
+`);
+
+const HeadlineContainer = styled.div`
+  max-width: 50%;
+
+  @media ${media.laptop} {
+    max-width: 70%;
+  }
+
+  @media ${media.mobile} {
+    max-width: 100%;
+  }
+`;
+
+function Welcome({ onButtonClick }) {
+  const onDownloadClick = () => {
+    window.open('./eva_bg.webp', '_blank');
+  };
 
   return (
     <MotionFlex
@@ -28,36 +80,47 @@ function Welcome({ onButtonClick }) {
       transition={{
         delay: 0.3,
       }}
-      flexDir="column"
-      alignItems="center"
+      flexDir='column'
+      alignItems='center'
+      justifyContent='center'
     >
-      <motion.div
-        animate={{
-          scale: buttonHover ? 0.9 : 1,
-        }}
-      >
+      <HeadlineContainer>
         <Headline
           style={{ margin: 0 }}
           dangerouslySetInnerHTML={{ __html: MainInfo.title }}
         />
-        <p dangerouslySetInnerHTML={{__html: MainInfo.description}} />
-      </motion.div>
+        <p dangerouslySetInnerHTML={{ __html: MainInfo.description }} />
+      </HeadlineContainer>
 
-      <MotionButton
+      <TerminalButton
         onClick={onButtonClick}
-        onMouseEnter={onEnterHandler}
-        onMouseLeave={onLeaveHandler}
         whileHover={{
           scale: 1.2,
         }}
         transition={{
-          type: "spring",
+          type: 'spring',
           stiffness: 300,
           damping: 15,
         }}
       >
-        Open the Terminal
-      </MotionButton>
+        Open terminal
+      </TerminalButton>
+      <ResumeButton
+        onClick={onDownloadClick}
+        whileHover={{
+          scale: 1.2,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 300,
+          damping: 15,
+        }}
+      >
+        Download resume
+      </ResumeButton>
+      <ArrowButton>
+        <span>&#x25BC;</span>
+      </ArrowButton>
     </MotionFlex>
   );
 }

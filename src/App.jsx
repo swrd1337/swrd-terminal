@@ -1,11 +1,11 @@
-import { FlexContainer } from "./components/styles/Flex";
-import { BackgroundImage } from "./components/styles/Image";
-import Welcome from "./components/Welcome";
-import Footer from "./components/Footer";
-import TerminalWindow from "./components/TerminalWindow";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Analytics } from "@vercel/analytics/react"
+import { FlexContainer } from './components/styles/Flex';
+import { BackgroundImage } from './components/styles/Image';
+import Welcome from './components/Welcome';
+import Footer from './components/Footer';
+import TerminalWindow from './components/TerminalWindow';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [openTerminal, setOpenTerminal] = useState(false);
@@ -15,21 +15,22 @@ function App() {
   return (
     <>
       <main>
+        <Analytics />
         <FlexContainer
-          h="100vh"
-          justifyContent="center"
-          alignItems="center"
-          flexDir="column"
+          h='100vh'
+          justifyContent='center'
+          alignItems='center'
+          flexDir='column'
           responsive={true}
         >
           <BackgroundImage
-            src="./eva_bg.webp"
-            alt="Evangelion blur background"
+            src='./eva_bg.webp'
+            alt='Evangelion blur background'
           />
           <motion.div
             animate={{
               y: openTerminal ? -1000 : 0,
-              display: openTerminal ? "none" : "block",
+              display: openTerminal ? 'none' : 'block',
             }}
           >
             <Welcome onButtonClick={onOpenClickHandler} />
@@ -39,7 +40,6 @@ function App() {
             onClose={onOpenClickHandler}
           />
         </FlexContainer>
-        <Analytics />
       </main>
       <Footer />
     </>

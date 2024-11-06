@@ -1,8 +1,8 @@
 {
-  "title": "Welcome to the <span class='user'>swrd1337</span>'s terminal!",
-  "description": "<i>Algorithm (noun.)</i> - Word used by programmers when...<br>they do not want to explain what they did.",
+  "title": "Welcome to <span class='user'>swrd1337</span>'s terminal",
+  "description": "I’m <b>Alexei</b>, a full-stack developer with over <b>six years</b> of experience in building scalable, high-performance applications.",
   "author": "Alexei Bunazov (2023)",
   "githubUrl": "https://github.com/swrd1337/swrd",
-  "username": "guest@swrd1337",
-  "terminalTitle": "Terminal"
+  "username": "guest@swrd",
+  "terminalTitle": "0x7f4a9b3d1337"
 }

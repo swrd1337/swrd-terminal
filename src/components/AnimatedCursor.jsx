@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import { useTheme } from "styled-components";
-import { CliCursor } from "./styles/Cli";
+import { motion } from 'framer-motion';
+import { useTheme } from 'styled-components';
+import { CliCursor } from './styles/Cli';
 
 const AnimatedCliCursor = motion(CliCursor);
 
@@ -11,13 +11,18 @@ function AnimatedCursor() {
     <AnimatedCliCursor
       animate={{
         backgroundColor: [
-          "#FFF0",
+          '#FFF0',
           theme.textColor.primary,
           theme.textColor.primary,
-          "#FFF0",
+          '#FFF0',
         ],
       }}
-      transition={{ repeat: Infinity }}
+      transition={{
+        repeat: Infinity,
+        repeatType: 'loop',
+        duration: 1,
+        ease: 'easeInOut',
+      }}
     />
   );
 }
