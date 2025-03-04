@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Headline = styled.h1`
   margin: 0;
   font-size: 32px;
+  text-align: center;
 `;
 
 export const DialogHeading = styled.h4`
@@ -10,7 +11,7 @@ export const DialogHeading = styled.h4`
   font-size: 18px;
   color: ${({ theme }) => theme.accent.secondary};
   user-select: none;
-`
+`;
 
 export const Typography = styled.p`
   &::before {
@@ -21,7 +22,7 @@ export const Typography = styled.p`
   font-weight: 600;
   text-align: left;
 
-  @media (max-width: ${({ theme}) => theme.breakpoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 14px;
   }
 `;

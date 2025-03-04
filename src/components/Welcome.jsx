@@ -16,7 +16,7 @@ const TerminalButton = motion(styled.button`
   padding: 10px;
   max-width: 210px;
   margin: 10px;
-
+  min-width: 164px;
   &:hover {
     cursor: pointer;
     background-color: #87c7bd24;
@@ -31,7 +31,7 @@ const ResumeButton = motion(styled.button`
   font-weight: 600;
   padding: 10px;
   margin: 10px;
-
+  min-width: 164px;
   &:hover {
     cursor: pointer;
     background-color: #87c7bd24;
@@ -51,20 +51,15 @@ const ArrowButton = motion(styled.button`
 `);
 
 const HeadlineContainer = styled.div`
-  max-width: 50%;
-
-  @media ${media.laptop} {
-    max-width: 70%;
-  }
-
+  margin: 32px;
   @media ${media.mobile} {
-    max-width: 100%;
+    margin: 8px;
   }
 `;
 
 function Welcome({ onButtonClick }) {
   const onDownloadClick = () => {
-    window.open('./eva_bg.webp', '_blank');
+    window.open('./cv.pdf', '_blank');
   };
 
   return (
@@ -91,36 +86,40 @@ function Welcome({ onButtonClick }) {
         />
         <p dangerouslySetInnerHTML={{ __html: MainInfo.description }} />
       </HeadlineContainer>
-
-      <TerminalButton
-        onClick={onButtonClick}
-        whileHover={{
-          scale: 1.2,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 300,
-          damping: 15,
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
         }}
       >
-        Open terminal
-      </TerminalButton>
-      <ResumeButton
-        onClick={onDownloadClick}
-        whileHover={{
-          scale: 1.2,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 300,
-          damping: 15,
-        }}
-      >
-        Download resume
-      </ResumeButton>
-      <ArrowButton>
-        <span>&#x25BC;</span>
-      </ArrowButton>
+        <TerminalButton
+          onClick={onButtonClick}
+          whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 300,
+            damping: 15,
+          }}
+        >
+          Open terminal
+        </TerminalButton>
+        <ResumeButton
+          onClick={onDownloadClick}
+          whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 300,
+            damping: 15,
+          }}
+        >
+          Download CV
+        </ResumeButton>
+      </div>
     </MotionFlex>
   );
 }
