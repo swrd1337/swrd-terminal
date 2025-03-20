@@ -1,21 +1,21 @@
-import { useEffect, useRef, useState } from "react";
-import { FlexContainer } from "./styles/Flex";
-import { CliInput } from "./styles/Cli";
-import { ContentBody } from "./styles/Paper";
-import AnimatedCursor from "./AnimatedCursor";
-import { CommandBody } from "./styles/Cli";
-import ActionCommandTypes from "../constants/ActionCommandTypes";
-import { Typography } from "./styles/Typography";
-import { getCommandOutput, getHistoryOutput } from "./utils/cliUtils";
-import ActionKeys from "../constants/ActionKeys";
-import Commands from "../resources/commands.json"
+import { useEffect, useRef, useState } from 'react';
+import { FlexContainer } from './styles/Flex';
+import { CliInput } from './styles/Cli';
+import { ContentBody } from './styles/Paper';
+import AnimatedCursor from './AnimatedCursor';
+import { CommandBody } from './styles/Cli';
+import ActionCommandTypes from '../constants/ActionCommandTypes';
+import { Typography } from './styles/Typography';
+import { getCommandOutput, getHistoryOutput } from './utils/cliUtils';
+import ActionKeys from '../constants/ActionKeys';
+import Commands from '../resources/commands.json';
 import { useTheme } from 'styled-components';
 
 function TerminalBody({ openTerminal }) {
   const inputFocus = useRef(null);
   const theme = useTheme();
 
-  const [command, setCommand] = useState("");
+  const [command, setCommand] = useState('');
   const [output, setOutput] = useState([...Commands.cover.messages]);
   const [history, setHistory] = useState({
     pos: -1,
@@ -26,23 +26,17 @@ function TerminalBody({ openTerminal }) {
     if (inputFocus.current) {
       inputFocus.current.focus();
     }
-  }, [inputFocus]);
+  }, [inputFocus, openTerminal]);
 
   useEffect(() => {
     if (inputFocus.current && window.innerWidth > theme.breakpoints.tablet) {
       inputFocus.current.scrollIntoView();
     }
-  }, [output])
+  }, [output]);
 
   const outsiteClickHandler = () => {
     inputFocus.current.focus();
   };
-
-  useEffect(() => {
-    if (inputFocus.current) {
-      inputFocus.current.focus();
-    }
-  }, [inputFocus, openTerminal]);
 
   const inputChangeHandler = ({ target: { value } }) => {
     setCommand(value);
@@ -72,7 +66,7 @@ function TerminalBody({ openTerminal }) {
       });
     }
     executeCommand();
-    setCommand("");
+    setCommand('');
   };
 
   const executeCommand = () => {
@@ -112,7 +106,7 @@ function TerminalBody({ openTerminal }) {
         pos: newPos,
       });
     } else {
-      setCommand("");
+      setCommand('');
       setHistory({
         ...history,
         pos: history.commands.length,
@@ -134,7 +128,7 @@ function TerminalBody({ openTerminal }) {
         }
         return element;
       })}
-      <FlexContainer alignItems="center">
+      <FlexContainer alignItems='center'>
         <CliInput
           ref={inputFocus}
           onChange={inputChangeHandler}
